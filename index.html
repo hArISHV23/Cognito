@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cognito Career Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-bold text-blue-600">Cognito Career Solutions</h1>
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#careers" class="hover:text-blue-600">Careers</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden px-4 pb-4 hidden">
+      <a href="#home" class="block py-2 hover:text-blue-600">Home</a>
+      <a href="#about" class="block py-2 hover:text-blue-600">About</a>
+      <a href="#services" class="block py-2 hover:text-blue-600">Services</a>
+      <a href="#careers" class="block py-2 hover:text-blue-600">Careers</a>
+      <a href="#contact" class="block py-2 hover:text-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="text-center py-16 px-4 bg-blue-100">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Empowering Careers, Enabling Dreams</h2>
+    <p class="text-lg text-gray-700 mb-6">Your trusted partner in career transformation.</p>
+    <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Get Started</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-3xl mx-auto px-4 py-12">
+    <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center">About Us</h3>
+    <p class="text-base md:text-lg text-center text-gray-700">
+      Cognito Career Solutions is a Coimbatore-based career guidance and training company. 
+      We empower individuals by helping them identify their strengths, build in-demand skills, and succeed in the job market 
+      through personalized mentorship, training programs, and placement support.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-gray-100 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Our Services</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded shadow">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Career Guidance</h4>
+          <p class="text-sm">Personalized advice to choose the right career path based on skills and interests.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Resume Building</h4>
+          <p class="text-sm">Professionally crafted resumes tailored to your goals.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Interview Training</h4>
+          <p class="text-sm">Mock sessions, expert feedback, and confidence-building techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers -->
+  <section id="careers" class="py-12 px-4 max-w-4xl mx-auto">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center">Careers at Cognito</h3>
+    <p class="text-center text-gray-700 mb-6">
+      Join our mission to transform lives through career empowerment. We’re always on the lookout for passionate trainers, mentors, and coordinators.
+    </p>
+
+    <div class="grid gap-6">
+      <div class="bg-white shadow p-6 rounded">
+        <h4 class="text-xl font-semibold text-blue-600 mb-2">Career Coach (Full-Time)</h4>
+        <p class="text-gray-700 text-sm mb-2">Location: Coimbatore</p>
+        <p class="text-gray-600 text-sm">Guide students and professionals on career paths, resume building, and interview skills.</p>
+      </div>
+      <div class="bg-white shadow p-6 rounded">
+        <h4 class="text-xl font-semibold text-blue-600 mb-2">Placement Coordinator (Part-Time)</h4>
+        <p class="text-gray-700 text-sm mb-2">Location: Remote / Coimbatore</p>
+        <p class="text-gray-600 text-sm">Build relationships with companies and coordinate job placements for our students.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+        Apply Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 px-4 max-w-3xl mx-auto">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center">Contact Us</h3>
+    <form class="grid gap-4" onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" class="p-3 rounded border border-gray-300" required>
+      <input type="email" id="email" placeholder="Your Email" class="p-3 rounded border border-gray-300" required>
+      <textarea id="message" placeholder="Your Message" rows="5" class="p-3 rounded border border-gray-300" required></textarea>
+      <select id="location" class="p-3 rounded border border-gray-300" required>
+        <option value="">Cognito Career Solutions at</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hyderabad">Hyderabad</option>
+      </select>
+      <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-gray-500 text-sm">
+    © 2025 Cognito Career Solutions. All rights reserved.
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918838143995" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 z-50" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.5 3.5c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17 4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17zM12 22c-1.6 0-3.1-.3-4.5-.9l-5.1 1.3 1.3-5.1c-.6-1.4-.9-2.9-.9-4.5 0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5-7c-.3-.1-1.6-.8-1.9-.9-.2-.1-.5-.1-.7.1-.2.2-.8.9-1 1.1s-.4.2-.7.1c-.3-.1-1.2-.5-2.3-1.4s-1.8-2-2-2.3c-.1-.3 0-.5.1-.7.1-.1.3-.4.5-.6.2-.2.2-.3.3-.5s0-.4 0-.6c0-.2-.7-1.7-.9-2.3-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.2-1 .9-1 2.2s1.1 2.5 1.2 2.6c.1.2 2.2 3.4 5.4 4.7.8.3 1.5.5 2 .7.8.3 1.5.3 2 .2.6-.1 1.6-.7 1.9-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/>
+    </svg>
+    <span>Chat</span>
+  </a>
+
+  <!-- Form JS -->
+  <script>
+    async function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const location = document.getElementById('location').value;
+
+      const webhookURL = "https://script.google.com/macros/s/AKfycbwFVSlXfpqJpE0nFyWsU5Eef6LSiuK0eoTj-6TaJldnFWrON8uZ2MfzP8RlPlPn79FYNg/exec";
+
+      const response = await fetch(webhookURL, {
+        method: "POST",
+        body: JSON.stringify({ name, email, message, location }),
+        headers: { "Content-Type": "application/json" }
+      });
+
+      if (response.ok) {
+        alert("✅ Message sent successfully!");
+        event.target.reset();
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>
